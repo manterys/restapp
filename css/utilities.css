@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-500);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.btn-header {
+    padding: 12px 28px;
+    font-size: 16px;
+    margin-left: 60px;
+}
+.btn-outline {
+    background-color: transparent;
+    border: 1px var(--green-1) solid;
+}
+.btn-green {
+    background-color: var(--green-2);
+}
+.btn-green:hover {
+    background-color: var(--green-1);
+}
+.btn-celadon-1 {
+    background-color: var(--celadon-1);
+    color: var(--green-1);
+}
+.btn-orange {
+    background-color: var(--orange-2);
+}
+.btn-orange:hover {
+    background-color: var(--orange-1);
+}

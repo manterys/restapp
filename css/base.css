@@ -1,0 +1,67 @@
+/* Readex Pro */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+/* Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    /* Font Family */
+    --ff-readex: 'Readex Pro', sans-serif;
+    --ff-rubik: 'Rubik', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-500: 500;
+
+    /* Colors */
+    --green-1: #37594E;
+    --green-2: #5B8B7C;
+    --green-3: #C3CDCA;
+    --celadon-1: #D8ECB7;
+    --celadon-2: #BDD98F;
+    --orange-1: #844322;
+    --orange-2: #EAA581;
+    --orange-3: #F6DCCE;
+    --yellow-1: #F9F8E0;
+    --pink-1: #A52149;
+    --pink-2: #D83A6A;
+    --pink-3: #EB99B2;
+    --pink-4: #F9D5E0;
+    --blue-1: #475996;
+    --blue-2: #76AAEB;
+    --torquise-1: #0E76A8;
+    --white: #FFFFFF;
+    --gray-1: #3E4442;
+    --gray-2: #767272;
+    --gray-3: #A3A0A0;
+}
+
+/* Base style */
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html, body {
+    font-family: var(--font-1);
+    font-weight: var(--fw-400);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--green-1);
+}
+img {
+    width: 100%;
+}
