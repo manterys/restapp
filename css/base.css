@@ -36,6 +36,21 @@
     --gray-1: #3E4442;
     --gray-2: #767272;
     --gray-3: #A3A0A0;
+
+    /* Space */
+    --space-scale-ratio: 1;
+    --space: calc(3rem * var(--space-scale-ratio));
+
+    --space-0_25: calc(0.25 * var(--space));
+    --space-0_5: calc(0.5 * var(--space));
+    --space-0_75: calc(0.75 * var(--space));
+    --space-1: var(--space);
+    --space-1_5: calc(1.5 * var(--space));
+    --space-2: calc(2 * var(--space));
+    --space-2_5: calc(2.5 * var(--space));
+    --space-3: calc(3 * var(--space));
+    --space-3_5: calc(3.5 * var(--space));
+    --space-4: calc(4 * var(--space));
 }
 
 /* Base style */
