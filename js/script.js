@@ -55,3 +55,24 @@ const appMoveTo = () => {
 }
 
 appMoveTo()
+
+// Splide
+new Splide( '.splide', {
+    type: false,
+    pagination: false,
+    arrows: false,
+    // autoWidth: true,
+    perPage: 1,
+    padding: '5rem',
+    gap: '1rem',
+    mediaQuery: 'min',
+    breakpoints: {
+        550: {
+            perPage: 2,
+        },
+        1000: {
+            destroy: true,
+        }
+
+ }
+ } ).mount();

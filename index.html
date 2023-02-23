@@ -9,11 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
+    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- JS -->
-    <!-- <script src="js/plugins.js" defer></script> -->
+    <script src="js/plugins.js" defer></script>
     <script src="js/script.js" defer></script>
     <!-- Favicons -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -60,11 +61,9 @@
                         <a href="#" class="btn btn-outline btn-celadon-1"><img src="images/Play-small.svg" alt="">Google Play</a>
                     </div>
                 </div>
-                <div class="hero__screens">
-                    <img
-                    srcset="images/hero-screen-mobile.svg 200w, images/hero-screen-desktop.svg 400w"
-                    sizes= "(max-width: 999px) 200px"
-                    src="images/hero-screen-desktop.svg" alt="">
+                <div class="hero__image">
+                    <img src="images/hero-screen-mobile.svg" alt="">
+                    <img src="images/hero-screen-desktop.svg" alt="">
                 </div>
             </div>
         </section>
@@ -73,7 +72,7 @@
         <section class="boxes">
             <div class="container">
                 <div class="box">
-                    <div class="box__icon">
+                    <div class="box__icon mobile">
                         <img src="images/icons/Mobile icon.svg" alt="mobile icon">
                     </div>
                     <div class="box__text">
@@ -82,7 +81,7 @@
                     </div>
                 </div>
                 <div class="box">
-                    <div class="box__icon">
+                    <div class="box__icon megaphone">
                         <img src="images/icons/Megaphone icon.svg" alt="megaphone icon">
                     </div>
                     <div class="box__text">
@@ -91,7 +90,7 @@
                     </div>
                 </div>
                 <div class="box">
-                    <div class="box__icon">
+                    <div class="box__icon bell">
                         <img src="images/icons/Bell icon.svg" alt="bell icon">
                     </div>
                     <div class="box__text">
@@ -107,21 +106,28 @@
             <div class="container">
                 <div class="advertisement__images">
                     <div class="advertisement__images-left">
-                        <img src="images/Type=Twitter.svg" alt="">
-                        <img src="images/placeholder.png" alt="">
+                        <img src="images/advertisement/advertisement-twitter.svg" alt="">
+                        <img src="images/advertisement/advertisement-image.png" alt="">
+                        <!-- <img src="images/Type=Facebook.svg" alt=""> -->
                     </div>
                     <div class="advertisement__images-right">
-                    <img src="images/Type=Facebook.svg" alt="">
-                    <img src="images/Type=Instagram.svg" alt="">
+                        <img src="images/advertisement/advertisement-facebook.svg" alt="">
+                        <img src="images/advertisement/advertisement-instagram.svg" alt="">
                     </div>
                 </div>
                 <div class="advertisement__description">
-                    <h3>Advertise your application on social media</h3>
-                    <p class="lead">Start promoting your restaurants and gain new customers, new orders, new opinions. Thanks to promotion in social media you are able to reach several hundred thousand customers.</p>
-                    <h4>Don't know how to create the first ad?</h4>
-                    <p class="lead">Creating an ad is a very simple thing. Put your post on social media, then start promoting it. Create your first ads in your region to encourage potential customers who will stay with you longer.</p>
-                    <h4>Spend me, get more!</h4>
-                    <p class="lead">If you already have a rich fanpage in social media then you can safely count on the fact that over time new customers will come alone.</p>
+                    <div class="advertisement__description-title">
+                        <h2>Advertise your application on social media</h2>
+                        <p class="lead">Start promoting your restaurants and gain new customers, new orders, new opinions. Thanks to promotion in social media you are able to reach several hundred thousand customers.</p>
+                    </div>
+                    <div class="advertisement__description-text">
+                        <h4>Don't know how to create the first ad?</h4>
+                        <p class="lead">Creating an ad is a very simple thing. Put your post on social media, then start promoting it. Create your first ads in your region to encourage potential customers who will stay with you longer.</p>
+                    </div>
+                    <div class="advertisement__description-text">
+                        <h4>Spend me, get more!</h4>
+                        <p class="lead">If you already have a rich fanpage in social media then you can safely count on the fact that over time new customers will come alone.</p>
+                    </div>
                     <a href="#" class="btn btn-orange">Read more</a>
                 </div>
             </div>
@@ -129,11 +135,56 @@
 
         <!-- Screenshots -->
         <section id="screenshots" class="screenshots">
+            <div class="screenshots-container">
+                <h2>Discover the look of our mobile application</h2>
+                    <div class="splide screenshots__images">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                               <li class="splide__slide">
+                                <img src="images/screenshots/screenshot-1.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                <img src="images/screenshots/screenshot-2.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                <img src="images/screenshots/screenshot-3.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                <img src="images/screenshots/screenshot-4.png" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                <img src="images/screenshots/screenshot-5.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
         </section>
 
         <!-- Features -->
         <section id="features" class="features">
             <div class="container">
+                <div class="features__description">
+                    <div class="features__description-title">
+                        <h2>What features will you get in our application?</h2>
+                        <p class="lead">The main features of our mobile application are: readability, transparency, efficiency and simple design. The entire application is very intuitive and modern, thanks to which everyone can use it.</p>
+                    </div>
+                    <div class="features__description-text">
+                        <h4>Why our application?</h4>
+                        <p class="lead">Aenean sollicitudin, lorem quis bibendum lorem ipsum dolar sit amet auctor, nisi elit consequat ipsum, nec sagittis sem nibh.</p>
+                    </div>
+                    <div class="btn btn-green">Read more</div>
+                </div>
+                <div class="features__images">
+                    <div class="features__images-left">
+                        <img src="images/features/feature-minimalistic.svg" alt="">
+                        <img src="images/features/feature-create.svg" alt="">
+                    </div>
+                    <div class="features__images-right">
+                        <img src="images/features/feature-friendly.svg" alt="">
+                        <img src="images/features/feature-speed.svg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
 

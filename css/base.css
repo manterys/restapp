@@ -37,6 +37,12 @@
     --gray-2: #767272;
     --gray-3: #A3A0A0;
 
+    /* Box shadow */
+    --box-shadow-green: 0px 20px 40px rgba(55, 89, 78, 0.2);
+    --box-shadow-orange: 0px 20px 40px rgba(203, 111, 65, 0.2);
+    --box-shadow-pink: 0px 20px 40px rgba(216, 58, 106, 0.2);
+    --box-shadow-celadon: 0px 20px 40px rgba(216, 236, 183, 0.4);
+
     /* Space */
     --space-scale-ratio: 1;
     --space: calc(3rem * var(--space-scale-ratio));

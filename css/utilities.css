@@ -18,36 +18,25 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--fw-400);
 }
 h1 {
-    /* desktop */
-    font-size: 48px;
-    line-height: 60px;
-
-    /* font-size: clamp(32px, 7vw, 48px); */
     font-size: 32px;
-    /* line-height: clamp(40px, 9vw, 60px); */
     line-height: 40px;
     text-align: center;
     color: var(--green-1);
-
     /* width: 350px; */
     max-width: 350px;
-    
-    /* margin-top: 8px; */
     margin-top: var(--space-0_25);
     margin-bottom: var(--space-0_75);
-    /* margin-bottom: 28px; */
-    /* background: cyan; */
 }
 h2 {
-    font-size: 40px;
-    line-height: 52px;
-    color: var(--gray-1);
-}
-h3 {
     font-size: 32px;
     line-height: 40px;
     color: var(--gray-1);
 }
+/* h3 {
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--gray-1);
+} */
 h4 {
     font-size: 24px;
     line-height: 32px;
@@ -68,27 +57,25 @@ h6.medium {
 }
 .subtitle {
     text-align: center;
-    /* desktop */
-    font-size: 20px;
-
     font-size: 16px;
     color: var(--green-2);
 }
 @media screen and (min-width: 1000px) {
     h1 {
         text-align: left;
-        /* desktop */
-        /* font-size: clamp(22px, 4vw, 48px); */
         font-size: 48px;
         line-height: 60px;
         max-width: none;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 52px;
     }
     h3 {
         font-size: 40px;
     }
     .subtitle {
         text-align: left;
-        /* desktop */
         font-size: 20px;
     }
 }
@@ -136,7 +123,7 @@ h6.medium {
     justify-content: center;
 
     width: 227px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 .btn-header {
     padding: 12px 28px;
@@ -159,7 +146,6 @@ h6.medium {
 .btn-pink {
     background-color: var(--pink-2);
 }
-
 @media screen and (hover: hover){
     .btn-green:hover {
         background-color: var(--green-1);
@@ -169,5 +155,15 @@ h6.medium {
     }
     .btn-pink:hover {
         background-color: var(--pink-1);
+    }
+}
+@media screen and (min-width: 1000px) {
+    .hero .btn-green, .btn-pink, .btn-celadon-1 {
+        margin: 0;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .btn-orange, .btn-green {
+        margin: 0;
     }
 }
