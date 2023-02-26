@@ -241,7 +241,7 @@
     padding-bottom: var(--space-2);
 }
 .screenshots h2{
-    text-align: center;
+    /* text-align: center; */
     max-width: 400px;
     margin: 0 auto;
     padding-left: .4rem;
@@ -539,24 +539,9 @@ label {
     justify-content: space-between;
     align-items: center;
 }
-.cta p {
-    text-align: center;
-    font-family: var(--ff-rubik);
-    font-size: 32px;
-    line-height: 40px;
-    max-width: 750px;
-    margin-bottom: var(--space-1);
-    color: var(--white);
-}
 @media screen and (min-width: 1300px) {
     .cta .container {
         flex-direction: row;
-    }
-    .cta p {
-        text-align: left;
-        font-size: 40px;
-        line-height: 52px;
-        margin-bottom: 0;
     }
 }
 
