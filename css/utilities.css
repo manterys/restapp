@@ -13,42 +13,46 @@
 }
 
 /* Header */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family: var(--ff-rubik);
     font-weight: var(--fw-400);
+    margin-bottom: var(--space-1);
+    margin-left: auto;
+    margin-right: auto;
 }
 h1, h2, h3 {
     text-align: center;
 }
+h2, h3, h4 {
+    color: var(--gray-1);
+    max-width: 570px;
+}
 h1 {
     font-size: 32px;
     line-height: 40px;
-    text-align: center;
     color: var(--green-1);
     max-width: 350px;
     margin-top: var(--space-0_25);
-    margin-bottom: var(--space-0_75);
 }
 h2 {
     font-size: 32px;
     line-height: 40px;
-    color: var(--gray-1);
 }
 .cta h2 {
     color: var(--white);
-    margin-bottom: var(--space-1);
 }
-/* h3 {
-    font-size: 32px;
+h3 {
+    font-size: 30px;
     line-height: 40px;
-    color: var(--gray-1);
-} */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 h4 {
     font-size: 24px;
     line-height: 32px;
-    color: var(--gray-1);
 }
-h5 {
+/* h5 {
     font-size: 20px;
     line-height: 24px;
 }
@@ -60,7 +64,7 @@ h6.medium {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-}
+} */
 @media screen and (min-width: 1000px) {
     h1 {
         text-align: left;
@@ -68,12 +72,22 @@ h6.medium {
         line-height: 60px;
         max-width: none;
     }
-    h2 {
-        font-size: 40px;
-        line-height: 52px;
-    }
     h3 {
         font-size: 40px;
+        line-height: 52px;
+        max-width: 700px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    h2 {
+        text-align: left;
+        font-size: 40px;
+        line-height: 52px;
+        max-width: 730px;
+    }
+    .cta h2 {
+        margin-bottom: 0;
+        margin-left: 0;
     }
 }
 /* Paragraph */
@@ -82,20 +96,26 @@ h6.medium {
     font-size: 16px;
     color: var(--green-2);
 }
+.subtitle, .lead, .lead-2, .lead-list, .lead-2-list, .lead-2-underline {
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-400);
+}
+.lead {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--gray-2);
+}
 @media screen and (min-width: 1000px) {
     .subtitle {
         text-align: left;
         font-size: 20px;
     }
 }
-.subtitle, .lead, .lead-2, .lead-list, .lead-2-list, .lead-2-underline {
-    font-family: var(--ff-roboto);
-    font-weight: var(--fw-400);
-}
-.lead {
-    font-size: 18px;
-    line-height: 28px;
-    color: var(--gray-2);
+@media screen and (min-width: 1300px) {
+    .lead {
+        text-align: left;
+    }
 }
 .lead-2 {
     font-size: 16px;
@@ -142,12 +162,12 @@ h6.medium {
     margin-left: 60px;
 }
 .btn-outline {
-    border: 1px solid;
+    outline: 1px solid;
 }
 .btn-green {
     background-color: var(--green-2);
 }
-.btn-celadon-1 {
+.btn-outline-celadon {
     background-color: var(--celadon-1);
     color: var(--green-1);
 }
@@ -158,6 +178,10 @@ h6.medium {
     background-color: var(--pink-2);
 }
 @media screen and (hover: hover){
+    .btn-outline:hover,
+    .btn-outline:focus {
+        outline: none;
+    }
     .btn-green:hover,
     .btn-green:focus {
         background-color: var(--green-1);
@@ -170,9 +194,14 @@ h6.medium {
     .btn-pink:focus {
         background-color: var(--pink-1);
     }
+    .btn-outline-celadon:hover,
+    .btn-outline-celadon:focus {
+        background-color: var(--green-2);
+        color: var(--white);
+    }
 }
 @media screen and (min-width: 1000px) {
-    .hero .btn-green, .btn-pink, .btn-celadon-1 {
+    .hero .btn-green, .btn-pink, .btn-outline-celadon {
         margin: 0;
     }
 }

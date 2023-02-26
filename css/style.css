@@ -59,7 +59,7 @@
 .hero {
     height: 840px;
     padding-top: var(--space-2_5);
-    background: url('../images/hero-background.png') no-repeat center center / cover;
+    background: url('../images/hero-background.svg') no-repeat center center / cover;
     background-color: var(--celadon-1);
 }
 .hero .container {
@@ -128,9 +128,6 @@
     flex-direction: column;
 
     border-bottom: 1px solid var(--green-3);
-}
-.boxes h4 {
-    margin-bottom: 1rem;
 }
 .box {
     display: flex;
@@ -240,21 +237,10 @@
     padding-top: var(--space-2);
     padding-bottom: var(--space-2);
 }
-.screenshots h2{
-    /* text-align: center; */
-    max-width: 400px;
-    margin: 0 auto;
-    padding-left: .4rem;
-    padding-right: .4rem;
-    margin-bottom: var(--space-1);
-}
 .screenshots img{
     box-shadow: var(--box-shadow-orange);
 }
 @media screen and (min-width: 1000px) {
-    .screenshots h2{
-        max-width: 500px;
-    }
     #screenshots .splide__list {
         display: flex;
         justify-content: center;
@@ -332,9 +318,7 @@
     padding-top: var(--space-1_5);
     padding-bottom: var(--space-1_5);
 }
-.testimonials h2 {
-    margin-bottom: 2rem;
-}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -407,14 +391,11 @@
     align-items: center;
 }
 .price__description {
-    text-align: center;
     margin-bottom: var(--space-1_5);
     max-width: 700px;
 }
-.price__description h2{
-    margin-bottom: var(--space-1);
-}
 .price__switch {
+    text-align: center;
     margin-top: var(--space-1);
 }
 .price__switch span{
@@ -488,6 +469,9 @@ label {
     font-weight: var(--fw-500);
     margin-bottom: var(--space-0_25);
 }
+.price__table-premium {
+    z-index: 1;
+}
 .price__table-premium-price {
     font-size: 70px;
     color: var(--orange-2)
@@ -511,16 +495,20 @@ label {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+    }
+    .price__table-premium {
+        transform: translateX(75px);
+    }
+    .price__table-free {
+        transform: translateX(-75px);
     }
 }
 @media screen and (min-width: 1300px) {
     .price .container {
         flex-direction: row;
-        gap: 1rem;
     }
-    .price__description {
-       text-align: left;
+    .price__switch {
+        text-align: left;
     }
     .price__table {
         width: 400px;
@@ -540,6 +528,9 @@ label {
     align-items: center;
 }
 @media screen and (min-width: 1300px) {
+    .cta {
+        padding-bottom: var(--space-2);
+    }
     .cta .container {
         flex-direction: row;
     }
