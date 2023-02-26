@@ -15,6 +15,51 @@ const appHeader = () => {
 }
 appHeader()
 
+// Counter
+const appCounter = () => {
+    const startCounter = document.querySelector('.fun-facts')
+    const counter = document.querySelectorAll('.counter')
+
+    // IntersectionObserver
+    let CounterObserver = new IntersectionObserver(
+        (entries, observer) => {
+            let [entry] = entries;
+            if (!entry.isIntersecting) return;
+            
+            counter.forEach(counterEl => {
+                counterEl.innerText = '0'
+                
+                const updateCounter = () => {
+                    const target = +counterEl.getAttribute('data-target')
+                    const count = +counterEl.innerText
+                    
+                    const increment = target / 200
+                    
+                    if(count < target) {
+                        counterEl.innerText = `${Math.ceil(count + increment)}`
+          setTimeout(updateCounter, 40)
+        } else {
+            counterEl.innerText = target
+        }
+    }
+    
+    updateCounter()
+})
+
+// observer.unobserve(startCounter)
+// observation is only one time
+observer.unobserve(startCounter)
+
+},
+{
+    root: null,
+    threshold: window.innerWidth > 768 ? 0.3 : 0.2,
+}
+)
+    CounterObserver.observe(startCounter)
+}
+appCounter()
+
 // Move to
 const appMoveTo = () => {
     const easeFunctions = {

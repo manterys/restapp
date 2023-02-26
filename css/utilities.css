@@ -109,29 +109,32 @@ h6.medium {
 
 /* Buttons */
 .btn {
-    display: inline-block;
-    cursor: pointer;
-    color: var(--white);
-    border: none;
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-family: var(--ff-rubik);
-    font-weight: var(--fw-500);
-    font-size: 20px;
+    /* display: inline-block; */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* padding: 14px 26px; */
+    padding-top: 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-500);
+    font-size: 20px;
+    border-radius: 8px;
+    color: var(--white);
 
     width: 227px;
     margin: 0 auto;
 }
 .btn-header {
-    padding: 12px 28px;
+    /* padding: 12px 28px; */
     font-size: 16px;
     margin-left: 60px;
 }
 .btn-outline {
-    border: 1px var(--green-1) solid;
+    border: 1px solid;
 }
 .btn-green {
     background-color: var(--green-2);
@@ -147,13 +150,16 @@ h6.medium {
     background-color: var(--pink-2);
 }
 @media screen and (hover: hover){
-    .btn-green:hover {
+    .btn-green:hover,
+    .btn-green:focus {
         background-color: var(--green-1);
     }
-    .btn-orange:hover {
+    .btn-orange:hover,
+    .btn-orange:focus {
         background-color: var(--orange-1);
     }
-    .btn-pink:hover {
+    .btn-pink:hover,
+    .btn-pink:focus {
         background-color: var(--pink-1);
     }
 }

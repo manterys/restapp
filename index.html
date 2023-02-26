@@ -50,8 +50,10 @@
             </div>
         </header>
 
-        <!-- Hero -->
-        <section id="hero" class="hero">
+        <!-- <main class="grid"> -->
+
+            <!-- Hero -->
+            <section id="hero" class="hero">
             <div class="container">
                 <div class="hero__title">
                     <p class="subtitle">Test our application for 30 days</p>
@@ -67,7 +69,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Boxes -->
         <section class="boxes">
             <div class="container">
@@ -106,13 +108,12 @@
             <div class="container">
                 <div class="advertisement__images">
                     <div class="advertisement__images-left">
-                        <img src="images/advertisement/advertisement-twitter.svg" alt="">
-                        <img src="images/advertisement/advertisement-image.png" alt="">
-                        <!-- <img src="images/Type=Facebook.svg" alt=""> -->
+                        <img src="images/advertisement/twitter-advertisement.svg" alt="">
+                        <img src="images/advertisement/image-advertisement.png" alt="">
                     </div>
                     <div class="advertisement__images-right">
-                        <img src="images/advertisement/advertisement-facebook.svg" alt="">
-                        <img src="images/advertisement/advertisement-instagram.svg" alt="">
+                        <img src="images/advertisement/facebook-advertisement.svg" alt="">
+                        <img src="images/advertisement/instagram-advertisement.svg" alt="">
                     </div>
                 </div>
                 <div class="advertisement__description">
@@ -132,7 +133,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Screenshots -->
         <section id="screenshots" class="screenshots">
             <div class="screenshots-container">
@@ -140,24 +141,24 @@
                     <div class="splide screenshots__images">
                         <div class="splide__track">
                             <ul class="splide__list">
-                               <li class="splide__slide">
+                                <li class="splide__slide">
                                 <img src="images/screenshots/screenshot-1.png" alt="">
-                                </li>
-                                <li class="splide__slide">
+                            </li>
+                            <li class="splide__slide">
                                 <img src="images/screenshots/screenshot-2.png" alt="">
-                                </li>
-                                <li class="splide__slide">
+                            </li>
+                            <li class="splide__slide">
                                 <img src="images/screenshots/screenshot-3.png" alt="">
-                                </li>
-                                <li class="splide__slide">
+                            </li>
+                            <li class="splide__slide">
                                 <img src="images/screenshots/screenshot-4.png" alt="">
-                                </li>
-                                <li class="splide__slide">
+                            </li>
+                            <li class="splide__slide">
                                 <img src="images/screenshots/screenshot-5.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
+                </div>
             </div>
         </section>
 
@@ -187,41 +188,139 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Testimonials -->
-        <section id="testimonials" class="tesminomials">
-            <div class="container"></div>
+        <section id="testimonials" class="testimonials">
+            <div class="container grid">
+                <div class="testimonials__description">
+                    <h2>Short stories of our satisfied users</h2>
+                    <p class="lead">Especially for you, we have prepared short stories of our users who agreed to share their opinions on our application. The main tests were carried out on performance and application stabilization.</p>
+                </div>
+                <div class="testimonials__column-1">
+                    <img src="images/testimonials/testimonial-image-1.svg" alt="">
+                    <img src="images/testimonials/testimonial-image-2.svg" alt="">
+                </div>
+                <div class="testimonials__column-2">
+                    <img src="images/testimonials/testimonial-image-3.svg" alt="">
+                    <img src="images/testimonials/testimonial-image-4.svg" alt="">
+                </div>
+                <div class="testimonials__column-3">
+                    <img src="images/testimonials/testimonial-image-5.svg" alt="">
+                    <img src="images/testimonials/testimonial-image-6.svg" alt="">
+                </div>
+                <div class="testimonials__column-4">
+                    <img src="images/testimonials/testimonial-image-7.svg" alt="">
+                </div>
+            </div>
         </section>
-
+    
         <!-- Price -->
         <section id="price" class="price">
-            <div class="container"></div>
+            <div class="container">
+                <div class="price__description">
+                    <h2>Choose the right subscription for yourself</h2>
+                    <p class="lead">You can use the application for free, but with some restrictions, that's why we've prepared the right subscription plan that you can choose for a month or a year.</p>
+                    <div class="price__switch">
+                        <label for="switch">
+                            <span>Monthly</span>
+                            <input type="checkbox" id="switch" class="price-switch-checkbox">
+                            <span></span>
+                            <span>Yearly</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="price__tables">
+                    <div class="price__table price__table-premium">
+                        <span class="price__table-title">Premium</span>
+                        <span class="price__table-price price__table-premium-price">$39</span>
+                        <div class="price__table-list">
+                            <span>10 users</span>
+                            <span>Many payment cards</span>
+                            <span>Order without any obligations</span>
+                            <span>Account without ads</span>
+                            <span>The history of orders</span>
+                            <span>Support 24/7</span>
+                        </div>
+                        <a href="#" class="btn btn-orange">Buy now</a>
+                    </div>
+                    <div class="price__table price__table-free">
+                        <span class="price__table-title">Free</span>
+                        <span class="price__table-price price__table-free-price">$0</span>
+                        <div class="price__table-list">
+                            <span>5 users</span>
+                            <span>2 payment cards</span>
+                            <span>Order without any obligations</span>
+                            <span>Account with ads</span>
+                            <span>The history of orders</span>
+                        </div>
+                        <a href="#" class="btn btn-green">Buy now</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- CTA -->
-        <section class="join-us">
-            <div class="container"></div>
+        <section class="cta">
+            <div class="container">
+                <p>Do you want to become a team member and improve our application?</p>
+                <div class="btn btn-outline btn-green">Join us</div>
+            </div>
         </section>
-
-        <!-- Sekcja z numerami -->
-        <section>
-            <div class="container"></div>
+        
+        <!-- Fun facts -->
+        <section class="fun-facts">
+            <div class="container">
+                <div class="fun-facts__descritpion">
+                    <h2>Our achievements will surprise you! Fun facts from our world!</h2>
+                </div>
+                <div class="fun-facts__numbers">
+                    <div class="fun-facts__number">
+                        <div class="fun-facts__counter">
+                            <span class="counter" data-target="28">0</span>
+                            <span>K</span>
+                        </div>
+                        <span>Happy users</span>
+                    </div>
+                    <div class="fun-facts__number">
+                        <div class="fun-facts__counter">
+                            <span class="counter" data-target="59">0</span>
+                            <span>K</span>
+                        </div>
+                        <span>Subscriptions sold</span>
+                    </div>
+                    <div class="fun-facts__number">
+                        <div class="fun-facts__counter">
+                            <span class="counter" data-target="3">0</span>
+                            <span>K</span>
+                        </div>
+                        <span>Positive feedback</span>
+                    </div>
+                    <div class="fun-facts__number">
+                        <div class="fun-facts__counter">
+                            <span class="counter" data-target="20">0</span>
+                            <span>+</span>
+                        </div>
+                        <span>Awards won</span>
+                    </div>
+                </div>
+            </div>
         </section>
-
+        
         <!-- FAQ -->
         <section id="faq" class="faq">
             <div class="container"></div>
         </section>
-
+        
         <!-- Contact -->
         <section id="contact" class="contact">
             <div class="container"></div>
         </section>
-
+        
         <!-- Footer -->
         <footer id="footer" class="footer">
         </footer>
-
+        
+    <!-- </main> -->
     </div>
 </body>
 </html>
