@@ -15,6 +15,14 @@ const appHeader = () => {
 }
 appHeader()
 
+// Accordion
+const accordionButton = document.querySelectorAll('.accordion__button')
+accordionButton.forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('accordion__button--active')
+    })
+})
+
 // Counter
 const appCounter = () => {
     const startCounter = document.querySelector('.fun-facts')
@@ -58,7 +66,7 @@ observer.unobserve(startCounter)
 )
     CounterObserver.observe(startCounter)
 }
-appCounter()
+// appCounter()
 
 // Move to
 const appMoveTo = () => {
