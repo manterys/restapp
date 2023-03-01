@@ -72,13 +72,16 @@ h6.medium {
     font-size: 18px;
     line-height: 24px;
 } */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1300px){
     h1 {
         text-align: left;
-        font-size: 48px;
+        font-size: 46px;
         line-height: 60px;
         max-width: none;
     }
+}
+@media screen and (min-width: 1000px) {
+
     h3 {
         font-size: 40px;
         line-height: 52px;
@@ -133,7 +136,7 @@ h6.medium {
     line-height: 28px;
     color: var(--gray-2);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1300px) {
     .subtitle {
         text-align: left;
         font-size: 20px;
