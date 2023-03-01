@@ -32,7 +32,6 @@ h1 {
     color: var(--green-1);
     font-size: 32px;
     line-height: 40px;
-    max-width: 350px;
     margin-top: var(--space-0_25);
 }
 h2,
@@ -72,16 +71,13 @@ h6.medium {
     font-size: 18px;
     line-height: 24px;
 } */
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 800px){
     h1 {
-        text-align: left;
-        font-size: 46px;
-        line-height: 60px;
-        max-width: none;
+        font-size: 40px;
+        line-height: 55px;
     }
 }
 @media screen and (min-width: 1000px) {
-
     h3 {
         font-size: 40px;
         line-height: 52px;
@@ -89,6 +85,11 @@ h6.medium {
     }
 }
 @media screen and (min-width: 1300px) {
+    h1 {
+        text-align: left;
+        font-size: 46px;
+        line-height: 60px;
+    }
     h2 {
         text-align: left;
         font-size: 40px;
@@ -179,7 +180,6 @@ button,
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 14px 26px; */
     padding-top: 14px;
     padding-bottom: 14px;
 
@@ -195,7 +195,7 @@ button,
     margin-left: 60px;
 }
 .btn-outline {
-    outline: 1px solid;
+    border: 1px solid;
 }
 .btn-green {
     background-color: var(--green-2);
@@ -213,7 +213,7 @@ button,
 @media screen and (hover: hover){
     .btn-outline:hover,
     .btn-outline:focus {
-        outline: none;
+        border-color: transparent;
     }
     .btn-green:hover,
     .btn-green:focus {
