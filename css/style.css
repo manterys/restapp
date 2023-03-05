@@ -294,16 +294,13 @@
     align-items: center;
     justify-content: space-between;
 }
-.advertisement__images {
+.advertisement__boxs {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: var(--space-2);
 }
-.advertisement__images img {
-    box-shadow: var(--box-shadow-orange);
-}
-.advertisement__images-left, .advertisement__images-right {
+.advertisement__boxs-left, .advertisement__boxs-right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -315,11 +312,66 @@
 .advertisement__description .lead{
     margin-bottom: var(--space-0_75);
 }
-.advertisement img {
+.advertisement__box {
     width: 330px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--space-0_75);
+    padding-bottom: var(--space-0_75);
+}
+.advertisement__box .icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-0_25);
+}
+.advertisement__box .icon img{
+    width: 26px;
+    height: 26px;
+}
+.advertisement__box.twitter .icon{
+    background-color: var(--blue-2);
+}
+.advertisement__box.facebook .icon{
+    background-color: var(--blue-1);
+}
+.advertisement__box.instagram .icon{
+    background-color: var(--pink-2);
+}
+.advertisement__box span{
+    line-height: 2.4;
+}
+.advertisement__box .title {
+    color: var(--gray-1);
+}
+.advertisement__box.twitter span:nth-of-type(2),
+.advertisement__box.twitter span:nth-of-type(3) {
+    color: var(--blue-2);
+}
+.advertisement__box.twitter span:nth-of-type(2) {
+    font-size: var(--fs-display-2);
+}
+.advertisement__box.twitter span:nth-of-type(3) {
+    font-size: var(--fs-lg);
+}
+.advertisement__box.twitter span:nth-of-type(4) {
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-sm);
+    color: var(--gray-2);
+}
+.advertisement__box .graph{
+    width: 80%;
+    margin-top: var(--space-0_75);
 }
 @media screen and (min-width: 800px) {
-    .advertisement__images {
+    .advertisement__boxs {
         flex-direction: row;
         align-items: center;
     }
@@ -329,7 +381,7 @@
         flex-direction: row;
         gap: 4rem;
     }
-    .advertisement__images {
+    .advertisement__boxs {
         margin-bottom: 0;
     }
     .advertisement__description {
