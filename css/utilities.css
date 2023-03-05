@@ -228,6 +228,10 @@ input[type="submit"] {
     font-size: var(--fs-sm);
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+    background-color: var(--green-1);
+}
+.btn-header:hover {
+    background-color: var(--green-2);
 }
 .btn-outline,
 input[type="submit"] {
@@ -247,7 +251,7 @@ input[type="submit"] {
 input[type="submit"] {
     background-color: var(--pink-2);
 }
-@media screen and (hover: hover){
+/* @media screen and (hover: hover){ */
     .btn-outline:hover,
     .btn-outline:focus {
         border-color: transparent;
@@ -269,7 +273,7 @@ input[type="submit"] {
         background-color: var(--green-2);
         color: var(--white);
     }
-}
+/* } */
 @media screen and (min-width: 1000px) {
     .hero .btn-green, .btn-pink, .btn-outline-celadon {
         margin: 0;

@@ -17,7 +17,7 @@
     box-shadow: var(--box-shadow-green);
 }
 .header.offset {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
 }
 .header__container {
     display: flex;
@@ -763,7 +763,7 @@ label {
 }
 .faq__image img {
     width: 330px;
-    height: 100%;
+    height: 540px;
 }
 .faq__description {
     max-width: 600px;
@@ -889,10 +889,6 @@ input[type="radio"] {
     position: relative;
     transform: translateY(20px);
 }
-input[type="radio"]:focus {
-    outline: none;
-    border: 1px solid var(--green-3);
-}
 input[type="radio"]::before {
     content: '';
     position: absolute;
@@ -904,6 +900,14 @@ input[type="radio"]::before {
 }
 input[type="radio"]:checked::before {
     display: block;
+}
+input[type="radio"]:focus {
+    outline: none;
+    border: 1px solid var(--green-3);
+}
+input[type="radio"]:focus::before {
+    display: block;
+    background-color: var(--green-2);
 }
 .email__form-radio label,
 .email__form-radio a {

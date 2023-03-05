@@ -54,7 +54,6 @@ const accordion = () => {
         
         accordionButton.forEach(button => {
             button.addEventListener('click', (e) => {
-                // button.classList.add('accordion__button--active')
                 removeActive()
                 if(!button.classList.contains('accordion__button--active')) {
                     button.classList.add('accordion__button--active')
@@ -113,7 +112,7 @@ observer.unobserve(startCounter)
 )
     CounterObserver.observe(startCounter)
 }
-// appCounter()
+appCounter()
 
 // Move to
 const appMoveTo = () => {
