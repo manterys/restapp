@@ -96,7 +96,7 @@
     background-color: transparent;
 }
 .menu-btn:active {
-    background-color: transparent;
+    background-color: none;
 }
 .hamburger-top,
 .hamburger-middle,
