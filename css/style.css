@@ -939,37 +939,42 @@ input[type="submit"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-input[type="radio"] {
+.newsletter input[type="radio"],
+.contact input[type="radio"] {
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
-    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
+    margin: 0;
     border-radius: 50%;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     transform: translateY(20px);
 }
-input[type="radio"]::before {
+.newsletter input[type="radio"]::before,
+.contact input[type="radio"]::before {
     content: '';
     position: absolute;
+    display: none;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--pink-2);
-    display: none;
 }
-.contact input[type="radio"] {
-    border: 1px solid var(--green-3);
+.newsletter input[type="radio"]::before {
+    background-color: var(--pink-2);
 }
 .contact input[type="radio"]::before {
     background-color: var(--green-2);
 }
-input[type="radio"]:checked::before {
+.contact input[type="radio"] {
+    border: 1px solid var(--green-3);
+}
+.newsletter input[type="radio"]:checked::before,
+.contact input[type="radio"]:checked::before {
     display: block;
 }
 input[type="radio"]:focus {
