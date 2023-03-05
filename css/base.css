@@ -73,11 +73,9 @@ html{
 html, body {
     font-family: var(--ff-rubik);
     font-weight: var(--fw-400);
+    background-color: var(--white);
     line-height: 1.5;
     overflow-x: hidden;
-}
-body {
-    background-color: var(--celadon-1);
 }
 li {
     list-style: none;
