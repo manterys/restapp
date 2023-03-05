@@ -1,3 +1,24 @@
+// Loader
+const appLoader = function() {
+
+    const page = document.querySelector('.page');
+    const loader = document.querySelector('.loader');
+    const overlay = document.querySelector('.overlay');
+    
+    window.addEventListener('load', function() {
+        loader.classList.add('loaded')
+        
+        loader.addEventListener('transitionend', function() {
+            page.classList.add('loaded')
+            loader.style.display = 'none'
+            // overlay.style.display = 'none'
+            setTimeout(() => (overlay.style.display = 'none'), 1000)
+            })
+    })
+}
+appLoader()
+
+
 // Header
 const appHeader = () => {
 

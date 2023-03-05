@@ -1,6 +1,59 @@
+/* Page wrapper */
+.page {
+    /* opacity: 0; */
+}
+.page.loaded {
+    opacity: 1;
+    transition: opacity 1s ease 0.5s;
+    /* transition: opacity 1s ease .4s; */
+}
+
+/* Loader */
+.loader {
+    z-index: 100;
+}
+.overlay {
+    z-index: 99;
+    transition: opacity 1s ease;
+}
+.loader,
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--celadon-2);
+    /* transition: opacity 0.3s ease 1s; */
+}
+.loader::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    border-radius: 50%;
+    border: 4px solid var(--celadon-1);
+    border-top-color: var(--green-1);
+    animation: loader 1s linear infinite;
+} 
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loader.loaded{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 /* Header */
 .header {
-    z-index: 100;
+    z-index: 200;
     width: 100%;
     position: fixed;
     top: 0;
@@ -51,7 +104,7 @@
     font-size: var(--fs-sm);
     margin-left: 1.6rem;
 }
-@media screen and (max-width: 1139px) {
+@media screen and (max-width: 1140px) {
     .header {
         height: 100px;
     }
@@ -83,7 +136,6 @@
         margin-left: 1.6rem;
     }
 }
-/* Hamburger Menu */
 .menu-btn {
     position: absolute;
     top: 11px;
@@ -117,6 +169,10 @@
 }
 .hamburger-bottom {
     bottom: 22px;
+}
+.menuActive .menu-btn{
+    transform: rotate(-180deg);
+    transition: transform 0.5s ease;
 }
 .menuActive .hamburger-top {
     transform: rotate(-45deg) translateY(5px) translateX(-5px);
@@ -908,7 +964,7 @@ label {
 input[type="email"],
 input[type="text"],
 textarea {
-    padding: 1rem 2rem;
+    padding: 1rem;
     border-radius: 8px;
     outline: none;
     border: 1px solid transparent;
@@ -981,16 +1037,16 @@ input[type="radio"]:focus {
     outline: none;
     border: 1px solid var(--green-3);
 }
-.email__form-radio label,
-.email__form-radio a {
+.newsletter-radio label,
+.newsletter-radio a {
     color: var(--white);
 }
-.email__form-radio a,
-.contact__form-radio a {
+.newsletter-radio a,
+.contact-radio a {
     text-decoration: underline;
 }
-.contact__form-radio label,
-.contact__form-radio a {
+.contact-radio label,
+.contact-radio a {
     color: var(--gray-2);
 }
 @media screen and (min-width: 1000px) {
@@ -1102,7 +1158,7 @@ textarea {
     color: var(--gray-3);
     resize: none;
 }
-.contact__form-radio {
+.contact-radio {
     margin-bottom: var(--space-1);
 }
 @media screen and (min-width:1300px){
