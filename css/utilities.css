@@ -207,7 +207,7 @@ input[type="submit"] {
     border: 1px solid var(--orange-2);
     width: 100%;
     text-align: left;
-    padding: 1.4rem 2rem;
+    padding: 1.4rem 3rem 1.4rem 1.8rem;
     font-size: var(--fs);
     color: var(--gray-1);
 }
