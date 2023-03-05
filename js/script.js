@@ -2,26 +2,73 @@
 const appHeader = () => {
 
     const header = document.getElementById('header')
-    const pxShow = 100
+    const scrolled = 50
+    let prevScrollpos = window.pageYOffset;
 
     window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
     
-        if (window.scrollY >= pxShow) {
+        if (window.scrollY >= scrolled) {
         header.classList.add('scrolled')
         } else {
         header.classList.remove('scrolled')
         }
+        if (prevScrollpos > currentScrollPos || currentScrollPos <= 600 || header.classList.contains('menuActive')) {
+          header.classList.remove('offset')
+        } else {
+        header.classList.add('offset')
+        }
+
+    prevScrollpos = currentScrollPos;
     }
+
+    const menuBtn = document.getElementById('menu-btn')
+
+    menuBtn.addEventListener('click', () => header.classList.toggle('menuActive'))
+
+    const navLink = document.querySelectorAll('.nav-link')
+    navLink.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            header.classList.remove('menuActive')
+        })
+    })
+
+    window.addEventListener('resize', function() {
+        if (window.matchMedia('(min-width: 1140px)').matches) {
+            if (header.classList.contains('menuActive')) header.classList.remove('menuActive')
+        }
+    })
+
 }
 appHeader()
 
 // Accordion
-const accordionButton = document.querySelectorAll('.accordion__button')
-accordionButton.forEach(button => {
-    button.addEventListener('click', () => {
-        button.classList.toggle('accordion__button--active')
+const accordion = () => {
+    const accordionButton = document.querySelectorAll('.accordion__button')
+    
+    function removeActive() {
+        accordionButton.forEach(button =>
+            button.classList.remove('accordion__button--active')
+            )
+        }
+        
+        accordionButton.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // button.classList.add('accordion__button--active')
+                removeActive()
+                if(!button.classList.contains('accordion__button--active')) {
+                    button.classList.add('accordion__button--active')
+                } else {
+                    button.classList.remove('accordion__button--active')
+                    console.log("asd")
+                    
+                }
+
+            }
+        )
     })
-})
+}
+accordion()
 
 // Counter
 const appCounter = () => {

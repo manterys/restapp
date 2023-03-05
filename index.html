@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
 </head>
-<body id="home">
+<body id="top">
     <!-- Loader -->
     <!-- <div class="loader">
     </div> -->
@@ -28,11 +28,11 @@
         <header id="header" class="header">
             <div class="header__container">
                 <!-- Logo -->
-                <a href="#hero" class="logo">Restapp.</a>
+                <a href="#top" class="logo smoothscroll">Restapp.</a>
                 <div class="header__right">
                     <!-- Navigation -->
                     <nav class="nav">
-                        <a href="#home" class="nav-link smoothscroll">Home</a>
+                        <a href="#top" class="nav-link smoothscroll">Home</a>
                         <a href="#advertisement" class="nav-link smoothscroll">Advertisement</a>
                         <a href="#screenshots" class="nav-link smoothscroll">Screenshots</a>
                         <a href="#features" class="nav-link smoothscroll">Features</a>
@@ -41,14 +41,19 @@
                         <a href="#faq" class="nav-link smoothscroll">FAQ</a>
                         <a href="#contact" class="nav-link smoothscroll">Contact</a>
                     </nav>
-                    <!-- Button -->
                     <a href="#" class="btn btn-header btn-green">Download app</a>
                 </div>
+                <!-- Hamburger Menu -->
+                <button id="menu-btn" class="menu-btn" type="button">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
             </div>
         </header>
         <main>
             <!-- Hero -->
-            <section id="hero" class="hero">
+            <section class="hero">
             <div class="container">
                 <div class="hero__title">
                     <p class="subtitle">Test our application for 30 days</p>
@@ -81,7 +86,7 @@
                         <img src="images/icons/mobile-icon.svg" alt="">
                     </div>
                     <div class="box__text">
-                        <h4>Promote your restaurant</h4>
+                        <span class="box__text-title">Promote your restaurant</span>
                         <p class="lead-align-left">Create a profile of your restaurant in our database and start promoting it through the mobile application.</p>
                     </div>
                 </div>
@@ -90,7 +95,7 @@
                         <img src="images/icons/megaphone-icon.svg" alt="">
                     </div>
                     <div class="box__text">
-                        <h4>Gain new customers</h4>
+                        <span class="box__text-title">Gain new customers</span>
                         <p class="lead-align-left">Thanks to the mobile application, you can reach more potential customers of your gastronomic point.</p>
                     </div>
                 </div>
@@ -99,7 +104,7 @@
                         <img src="images/icons/bell-icon.svg" alt="">
                     </div>
                     <div class="box__text">
-                        <h4>Turn on notifications</h4>
+                        <span class="box__text-title">Turn on notifications</span>
                         <p class="lead-align-left">Allow sharing of notifications related to news and promotions in the restaurant, they like and are waiting for it!</p>
                     </div>
                 </div>
@@ -139,7 +144,6 @@
         
         <!-- Screenshots -->
         <section id="screenshots" class="screenshots">
-            <!-- <div> -->
                 <h3>Discover the look of our mobile application</h3>
                     <div class="splide screenshots__images">
                         <div class="splide__track">
@@ -162,7 +166,6 @@
                         </ul>
                     </div>
                 </div>
-            <!-- </div> -->
         </section>
 
         <!-- Features -->
@@ -234,9 +237,7 @@
                                 <span class="user-role">Taxi Driver</span>
                             </div>
                         </div>
-                        <p class="text-small">Every day I am moving in my car.
-                            I have an app that I use very often.
-                            I am satisfied with the operation of this project. It's really great that it can make life easier.</p>
+                        <p class="text-small">Every day I am moving in my car. I have an app that I use very often. I am satisfied with the operation of this project. It's really great that it can make life easier.</p>
                     </div>
                 </div>
                 <div class="testimonials__column-2">
@@ -248,8 +249,7 @@
                                 <span class="user-role">Teacher</span>
                             </div>
                         </div>
-                        <p class="text-small">I must admit that I am impressed by the operation of this application.
-                            I really didn't expect it to work that fast. Very solid performance.</p>
+                        <p class="text-small">I must admit that I am impressed by the operation of this application. I really didn't expect it to work that fast. Very solid performance.</p>
                     </div>
                     <div class="testimonial">
                         <div class="user">
@@ -287,7 +287,7 @@
                 <div class="testimonials__column-4">
                     <div class="testimonial">
                         <div class="user">
-                            <img class="user-image" src="images/avatars/user-07.png" alt="">
+                            <img class="user-image" src="images/avatars/user-07.png" alt="user Kate Williams">
                             <div class="user-details">
                                 <span class="user-name">Kate Williams</span>
                                 <span class="user-role">Designer</span>
@@ -306,12 +306,12 @@
                     <h2>Choose the right subscription for yourself</h2>
                     <p class="lead">You can use the application for free, but with some restrictions, that's why we've prepared the right subscription plan that you can choose for a month or a year.</p>
                     <div class="price__switch">
+                        <span>Monthly</span>
                         <label for="switch">
-                            <span>Monthly</span>
                             <input type="checkbox" id="switch" class="price-switch-checkbox">
                             <span></span>
-                            <span>Yearly</span>
                         </label>
+                        <span>Yearly</span>
                     </div>
                 </div>
                 <div class="price__tables">
@@ -397,15 +397,14 @@
                 <div class="faq__image">
                     <img src="images/screenshots/screenshot-06.png" alt="app screenshot">
                 </div>
-                <!-- !!! -->
-                <div>
-                <div class="faq__description">
-                    <h2>Questions & Answers</h2>
-                    <p class="lead">Frequently Asked Questions. If you don't find the answer you need, please use the contact form at the bottom of the page.</p>
-                </div>
+                <div class="faq__right">
+                    <div class="faq__description">
+                        <h2>Questions & Answers</h2>
+                        <p class="lead">Frequently Asked Questions. If you don't find the answer you need, please use the contact form at the bottom of the page.</p>
+                    </div>
                     <div class="accordion">
                         <div class="accordion__container">
-                            <button type="button" class="accordion__button">Who is the application available for?</button>
+                           <button type="button" class="accordion__button">Who is the application available for?</button>
                             <div class="accordion__text">
                                 <p class="lead">Our mobile application works on all mobile devices with Android 6.0.1 or later and iOS. In case of any problems, please contact our technical support.</p>
                             </div>
@@ -433,8 +432,30 @@
             </div>
         </section>
         
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe<br>our newsletter</h2>
+                <form class="newsletter__form">
+                    <div class="email">
+                        <input type="text" name="Email" placeholder="Enter your e-mail address" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your e-mail address'" required>
+                        <input type="submit" value="Subscribe now">
+                    </div>
+                    <div class="email__form-radio">
+                        <input id="radio" type="radio">
+                        <label for="radio">I agree to the processing of my personal data by the Restapp – <a href="">Read our rules</a></label>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <!-- Contact -->
         <section id="contact" class="contact">
+            <div class="container"></div>
+        </section>
+
+        <!-- Download -->
+        <section class="download">
             <div class="container"></div>
         </section>
         
