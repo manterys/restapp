@@ -106,7 +106,7 @@
     width: 24px;
     height: 2px;
     background: var(--green-2);
-    border-radius: 10px;
+    border-radius: 8px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .hamburger-top {
@@ -899,12 +899,15 @@ label {
 }
 .newsletter h2 {
     line-height: 1;
+    margin-right: auto;
 }
 .newsletter__form {
     display: flex;
     flex-direction: column;
 }
-input[type="text"] {
+input[type="email"],
+input[type="text"],
+textarea {
     padding: 1rem 2rem;
     border-radius: 8px;
     outline: none;
@@ -915,7 +918,14 @@ input[type="text"] {
     margin-bottom: 1rem;
     width: 100%;
 }
-input[type="text"]:focus {
+input[type="email"],
+input[type="text"],
+textarea {
+    border-color: var(--green-3);
+}
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
     border-color: var(--green-3);
 }
 input[type="submit"] {
@@ -950,16 +960,18 @@ input[type="radio"]::before {
     background-color: var(--pink-2);
     display: none;
 }
+.contact input[type="radio"] {
+    border: 1px solid var(--green-3);
+}
+.contact input[type="radio"]::before {
+    background-color: var(--green-2);
+}
 input[type="radio"]:checked::before {
     display: block;
 }
 input[type="radio"]:focus {
     outline: none;
     border: 1px solid var(--green-3);
-}
-input[type="radio"]:focus::before {
-    display: block;
-    background-color: var(--green-2);
 }
 .email__form-radio label,
 .email__form-radio a {
@@ -972,16 +984,123 @@ input[type="radio"]:focus::before {
     .email {
         display: flex;
     }
-    input[type="submit"] {
+    .newsletter input[type="submit"] {
         width: 280px;
         margin-left: 1rem;
+        margin-bottom: 0;
+    }
+    .newsletter input[type="email"] {
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 1300px) {
     .newsletter .container {
         display: flex;
     }
-    input[type="text"] {
+    .newsletter input[type="email"] {
         width: 580px;
     }
+}
+
+/* Contact */
+.contact {
+    background: url('../images/backgrounds/contact.svg') no-repeat right / contain;
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+}
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem
+}
+.contact__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
+}
+.details {
+    display: flex;
+    margin-bottom: var(--space-0_5);
+}
+.details-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--green-3);
+    border-radius: 8px;
+    margin-right: var(--space-0_75);
+}
+.details img {
+    width: 36px;
+    height: 36px;
+}
+.social-icons {
+    display: flex;
+}
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0.4rem;
+    border-radius: 8px;
+}
+.social-icons a:hover {
+    opacity: .85;
+}
+.social-icons img {
+    width: 26px;
+    height: 26px;
+}
+.social-icons .twitter {
+    background-color: var(--blue-2);
+}
+.social-icons .facebook {
+    background-color: var(--blue-1);
+}
+.social-icons .instagram {
+    background-color: var(--pink-2);
+}
+.social-icons .linkedin {
+    background-color: var(--turquise-1);
+}
+.form {
+    max-width: 690px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-green);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+}
+textarea {
+    color: var(--gray-3);
+    resize: none;
+}
+.contact__form-radio {
+    margin-bottom: var(--space-1);
+}
+@media screen and (min-width:1300px){
+    .contact .container {
+        flex-direction: row;
+    }
+    .contact__description {
+        align-items: flex-start;
+    }
+}
+
+/* Download */
+.download {
+    background: url('../images/backgrounds/download.svg') no-repeat center / contain;
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
 }

@@ -32,8 +32,6 @@ h3,
 h4 {
     font-family: var(--ff-rubik);
     font-weight: var(--fw-400);
-    margin-left: auto;
-    margin-right: auto;
 }
 h1,
 h2,
@@ -62,6 +60,11 @@ h2 {
 h3 {
     font-size: var(--fs-xlg);
     max-width: 400px;
+}
+.screenshots h3,
+.fun-facts h3 {
+    margin-left: auto;
+    margin-right: auto;
 }
 h4 {
     font-size: var(--fs-lg);
@@ -118,15 +121,16 @@ h4 {
 }
 /* Paragraph */
 .lead {
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     max-width: 700px;
 }
 .subtitle,
 .lead {
     text-align: center;
 }
-.accordion__text .lead {
+.accordion__text .lead,
+.contact-details .lead {
     text-align: left;
 }
 .subtitle{
@@ -247,8 +251,7 @@ input[type="submit"] {
 .btn-orange {
     background-color: var(--orange-2);
 }
-.btn-pink,
-input[type="submit"] {
+.btn-pink {
     background-color: var(--pink-2);
 }
 /* @media screen and (hover: hover){ */

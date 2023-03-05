@@ -458,7 +458,7 @@
                 <h2>Subscribe<br>our newsletter</h2>
                 <form class="newsletter__form">
                     <div class="email">
-                        <input type="text" name="Email" placeholder="Enter your e-mail address" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your e-mail address'" required>
+                        <input type="email" placeholder="Enter your e-mail address" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your e-mail address'" required>
                         <input type="submit" value="Subscribe now" class="btn-pink">
                     </div>
                     <div class="email__form-radio">
@@ -471,19 +471,71 @@
 
         <!-- Contact -->
         <section id="contact" class="contact">
-            <div class="container"></div>
+            <div class="container">
+                <div class="contact__description">
+                    <h2>Get in touch</h2>
+                    <p class="lead">Do you have a question for us? We'd love to hear from you and we would be happy to answer your questions.</p>
+                    <div class="contact-details">
+                        <div class="details">
+                            <div class="details-icon">
+                                <img src="images/icons/pin.svg" alt="">
+                            </div>
+                            <p class="lead">1244 Mission College Blvd, Santa Clara<br>CA 95188, United States</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-icon">
+                                <img src="images/icons/phone.svg" alt="">
+                            </div>
+                            <p class="lead">Support: +1 408-888-1700<br>Office: +1 408-888-1900</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-icon">
+                                <img src="images/icons/mail.svg" alt="">
+                            </div>
+                            <p class="lead">support@urhofoodapp.com<br>office@urhofoodapp.com</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="twitter"><img src="images/icons/twitter.svg" alt=""></a>
+                        <a href="#" class="facebook"><img src="images/icons/facebook.svg" alt=""></a>
+                        <a href="#" class="instagram"><img src="images/icons/instagram.svg" alt=""></a>
+                        <a href="#" class="linkedin"><img src="images/icons/linkedin.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="form">
+                    <h4>Contact form</h4>
+                    <form class="contact__form" action="https://formsubmit.io/send/see2121@gmail.com" method="POST">
+                        <input name="name" type="text" placeholder="Name" onfocus="this.placeholder=''" onblur="this.placeholder='Name'" required>
+                        <input name="email" type="email" placeholder="E-mail address" onfocus="this.placeholder=''" onblur="this.placeholder='E-mail address'" required>
+                        <input name="text" type="text" placeholder="Subject" onfocus="this.placeholder=''" onblur="this.placeholder='Subject'" required>
+                        <textarea name="message" rows="4" cols="50">Message</textarea>
+                        <div class="contact__form-radio">
+                            <input id="radio" type="radio">
+                            <label for="radio">I have read the website policy – <a href="">Read our rules</a></label>
+                        </div>
+                        <input name="_formsubmit_id" type="text" style="display:none">
+                        <input type="submit" value="Send message" class="btn-green">
+                    </form>
+                </div>
+            </div>
         </section>
 
         <!-- Download -->
         <section class="download">
-            <div class="container"></div>
+            <div class="container">
+                <h2>Download our mobile app</h2>
+                <p class="lead">Download applications to your phone, install and enjoy ordering food online without leaving your home!</p>
+                <div class="download__buttons">
+                    <a href="" class="btn"></a>
+                    <a href="" class="btn"></a>
+                </div>
+            </div>
         </section>
-        
+
     </main>
 
         <!-- Footer -->
-        <footer id="footer" class="footer">
-        </footer>
+        <footer id="footer" class="footer">© Restapp 2023  •  All Rights Reserved</footer>
         
     </div>
 
