@@ -62,7 +62,6 @@
 /* Base style */
 html{
     box-sizing: border-box;
-    background-color: var(--celadon-1);
 }
 *,
 *::after,
@@ -78,7 +77,7 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    background-color: var(--white);
+    background-color: var(--celadon-1);
 }
 li {
     list-style: none;

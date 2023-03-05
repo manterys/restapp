@@ -313,7 +313,7 @@
     margin-bottom: var(--space-0_75);
 }
 .advertisement__box {
-    width: 330px;
+    max-width: 330px;
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: var(--box-shadow-orange);
