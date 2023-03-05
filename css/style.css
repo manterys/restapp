@@ -35,13 +35,11 @@
     align-items: center;
     height: 60px;
 }
-/* Logo */
 .logo {
     font-family: var(--ff-readex);
     font-size: var(--fs-xxlg);
     transform: translateY(-6px);
 }
-/* Navigation */
 .nav {
     display: flex;
     align-items: center;
@@ -95,6 +93,9 @@
     z-index: 1;
     width: 60px;
     height: 60px;
+    background-color: transparent;
+}
+.menu-btn:active {
     background-color: transparent;
 }
 .hamburger-top,
