@@ -121,8 +121,6 @@ h4 {
 }
 /* Paragraph */
 .lead {
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     max-width: 700px;
 }
 .subtitle,
@@ -132,6 +130,10 @@ h4 {
 .accordion__text .lead,
 .contact-details .lead {
     text-align: left;
+}
+.testimonials .lead {
+    margin-left: auto;
+    margin-right: auto;
 }
 .subtitle{
     color: var(--green-2);
@@ -197,8 +199,7 @@ button {
     display: block;
 }
 button,
-.btn,
-input[type="submit"] {
+.btn {
     cursor: pointer;
     outline: none;
     border: none;
@@ -226,6 +227,7 @@ input[type="submit"] {
     padding-bottom: 0.8rem;
     width: 227px;
     margin: 0 auto;
+    transition: all 0.2s ease;
 }
 .btn-header {
     width: 165px;
@@ -237,16 +239,8 @@ input[type="submit"] {
 .btn-header:hover {
     background-color: var(--green-2);
 }
-.btn-outline,
-input[type="submit"] {
-    border: 1px solid;
-}
 .btn-green {
     background-color: var(--green-2);
-}
-.btn-outline-celadon {
-    background-color: var(--celadon-1);
-    color: var(--green-1);
 }
 .btn-orange {
     background-color: var(--orange-2);
@@ -254,6 +248,27 @@ input[type="submit"] {
 .btn-pink {
     background-color: var(--pink-2);
 }
+.btn-outline {
+    border: 1px solid;
+}
+.btn-outline-green {
+    background-color: var(--green-2);
+    border: 1px solid var(--white);
+}
+.btn-outline-pink {
+    border: 1px solid var(--white);
+    background-color: var(--pink-2);
+}
+.btn-outline-celadon {
+    background-color: var(--celadon-1);
+    color: var(--green-1);
+}
+.btn-outline-white{
+    border: 1px solid var(--pink-2);
+    background-color: var(--white);
+    color: var(--pink-1)
+}
+
 /* @media screen and (hover: hover){ */
     .btn-outline:hover,
     .btn-outline:focus {
@@ -276,14 +291,29 @@ input[type="submit"] {
         background-color: var(--green-2);
         color: var(--white);
     }
-/* } */
+    .btn-outline-green:hover,
+    .btn-outline-green:focus {
+        background-color: var(--white);
+        color: var(--green-2);
+    }
+    .btn-outline-pink:hover,
+    .btn-outline-pink:focus {
+        background-color: var(--white);
+        color: var(--pink-2);
+    }
+    .btn-outline-white:hover,
+    .btn-outline-white:focus {
+        background-color: var(--pink-2);
+        color: var(--white);
+    }
+
 @media screen and (min-width: 1000px) {
     .hero .btn-green, .btn-pink, .btn-outline-celadon {
         margin: 0;
     }
 }
 @media screen and (min-width: 1300px) {
-    .btn-orange, .btn-green {
+    .btn-orange, .btn-green, .btn-outline-green {
         margin: 0;
     }
 }

@@ -1,29 +1,28 @@
 // Loader
-const appLoader = function() {
-
-    const page = document.querySelector('.page');
-    const loader = document.querySelector('.loader');
-    const overlay = document.querySelector('.overlay');
+const appPreloader = function() {
+    body = document.body;
+    const preloader = document.querySelector('.preloader');
     
     window.addEventListener('load', function() {
-        loader.classList.add('loaded')
+        body.classList.add('show')
         
-        loader.addEventListener('transitionend', function() {
-            page.classList.add('loaded')
-            loader.style.display = 'none'
-            // overlay.style.display = 'none'
-            setTimeout(() => (overlay.style.display = 'none'), 1000)
+        preloader.addEventListener('transitionend', function() {
+            preloader.style.display = 'none'
+            AOS.init({
+                duration: 800,
+                once: true,
             })
+        })
     })
 }
-appLoader()
+appPreloader()
 
 
 // Header
 const appHeader = () => {
 
     const header = document.getElementById('header')
-    const scrolled = 50
+    const scrolled = 150
     let prevScrollpos = window.pageYOffset;
 
     window.onscroll = function() {

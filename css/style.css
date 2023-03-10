@@ -1,23 +1,17 @@
 /* Page wrapper */
 .page {
-    /* opacity: 0; */
+    opacity: 0;
 }
-.page.loaded {
+.show .page {
     opacity: 1;
-    transition: opacity 1s ease 0.5s;
-    /* transition: opacity 1s ease .4s; */
-}
-
-/* Loader */
-.loader {
-    z-index: 100;
-}
-.overlay {
-    z-index: 99;
     transition: opacity 1s ease;
 }
-.loader,
-.overlay {
+
+/* Preloader */
+.preloader {
+    z-index: 100;
+}
+.preloader {
     display: block;
     position: fixed;
     top: 0;
@@ -25,9 +19,8 @@
     height: 100vh;
     width: 100%;
     background-color: var(--celadon-2);
-    /* transition: opacity 0.3s ease 1s; */
 }
-.loader::before {
+.preloader::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -39,20 +32,21 @@
     border-radius: 50%;
     border: 4px solid var(--celadon-1);
     border-top-color: var(--green-1);
-    animation: loader 1s linear infinite;
+    animation: preloader 1s linear infinite;
 } 
-@keyframes loader {
+@keyframes preloader {
     to {
         transform: rotate(360deg);
     }
 }
-.loader.loaded{
+.show .preloader{
     opacity: 0;
     transition: opacity 1s ease;
 }
 
 /* Header */
 .header {
+    opacity: 0;
     z-index: 200;
     width: 100%;
     position: fixed;
@@ -62,7 +56,10 @@
     display: flex;
     justify-content: center;
     padding: 0 30px;
-    transition: height 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    transition: opacity 1s ease 1s, background-color 0.3s ease, transform 0.3s ease;
+}
+.show .header {
+    opacity: 1;
 }
 .header.scrolled {
     height: 90px;
@@ -218,12 +215,14 @@
 }
 .hero__buttons a:nth-child(2):hover svg path{
     fill: #fff;
+    transition: fill 0.3s ease;
 }
 .hero__images {
     display: flex;
     justify-content: center;
 }
 .hero__images img {
+    opacity: 0;
     box-shadow: var(--box-shadow-green);
 }
 .hero__images img:nth-child(1) {
@@ -232,11 +231,19 @@
     height: 100%;
     transform: translateX(50px);
 }
+.show .hero__images img:nth-child(1) {
+    opacity: 1;
+    transition: opacity 1.4s ease 3s;
+}
 .hero__images img:nth-child(2) {
     z-index: 1;
     width: 210px;
     height: 100%;
     transform: translateX(-50px) translateY(50px);
+}
+.show .hero__images img:nth-child(2) {
+    opacity: 1;
+    transition: opacity 1.4s ease 3.3s;
 }
 .hero__images img:nth-child(3) {
     width: 240px;
@@ -260,6 +267,10 @@
         display: block;
         min-width: 220px;
         transform: translateX(-125px)
+    }
+    .show .hero__images img:nth-child(3) {
+        opacity: 1;
+        transition: opacity 1.4s ease 3.6s;
     }
 }
 @media screen and (min-width: 1140px) {
@@ -1187,9 +1198,9 @@ textarea {
     gap: 1rem;
     margin-top: var(--space-1);
 }
-.download__buttons .btn-outline{
-    background-color: var(--white);
-    color: var(--pink-1)
+.download__buttons .btn-outline-white:hover svg path{
+    fill: var(--white);
+    transition: fill 0.3s ease;
 }
 .download__buttons svg{
     width: 38px;
