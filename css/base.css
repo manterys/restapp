@@ -1,21 +1,42 @@
-/* Readex Pro */
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
-/* Rubik */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
-/* Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Fonts */
+@font-face {
+    font-family: 'Readex Pro';
+    src: url('../fonts/readexpro-regular.eot');
+    src: url('../fonts/readexpro-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/readexpro-regular.woff2') format('woff2'),
+         url('../fonts/readexpro-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/rubik-regular.eot');
+    src: url('../fonts/rubik-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/rubik-regular.woff2') format('woff2'),
+        url('../fonts/rubik-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/rubik-medium.eot');
+    src: url('../fonts/rubik-medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/rubik-medium.woff2') format('woff2'),
+        url('../fonts/rubik-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular.eot');
+    src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular.woff2') format('woff2'),
+         url('../fonts/roboto-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 :root {
-    /* Font Family */
-    --ff-readex: 'Readex Pro', sans-serif;
-    --ff-rubik: 'Rubik', sans-serif;
-    --ff-roboto: 'Roboto', sans-serif;
-
-    /* Font Weight */
-    --fw-400: 400;
-    --fw-500: 500;
-
-    /* Colors */
     --green-1: #37594E;
     --green-2: #5B8B7C;
     --green-3: #C3CDCA;
@@ -60,8 +81,9 @@
 }
 
 /* Base style */
-html{
-    box-sizing: border-box;
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 *,
 *::after,
@@ -71,11 +93,11 @@ html{
     box-sizing: inherit;
 }
 html, body {
-    font-family: var(--ff-rubik);
-    font-weight: var(--fw-400);
+    overflow-x: hidden;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     background-color: var(--white);
     line-height: 1.5;
-    overflow-x: hidden;
 }
 li {
     list-style: none;
@@ -83,6 +105,17 @@ li {
 a {
     text-decoration: none;
     color: var(--green-1);
+}
+a:focus,
+button:focus,
+.btn:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: #000 dotted 3px;
+    outline-offset: .1rem;
 }
 img {
     width: 100%;

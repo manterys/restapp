@@ -1,5 +1,16 @@
 :root {
-    /* 
+    --fs-xsm: 0.9rem;
+    --fs-sm: 1rem;
+    --fs: 1.125rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xlg: 1.85rem;
+    --fs-xxlg: 2rem;
+    --fs-display-1: 2.5rem;
+    --fs-display-2: 3rem;
+    --fs-display-3: 4rem;
+
+    /*
     --fs-xsm: 14.4px
     --fs-sm: 16px
     --fs: 18px
@@ -11,91 +22,6 @@
     --fs-display-2: 48px
     --fs-display-3: 64px
     */
-
-    --fs-xsm: 0.9rem;
-    --fs-sm: 1rem;
-    --fs: 1.125rem;
-    --fs-md: 1.25rem;
-    --fs-lg: 1.5rem;
-    --fs-xlg: 1.85rem;
-    --fs-xxlg: 2rem;
-    --fs-display-1: 2.5rem;
-    --fs-display-2: 3rem;
-    --fs-display-3: 4rem;
-}
-
-
-@media screen and (min-width: 800px){
-    h1 {
-        font-size: 40px;
-    }
-}
-@media screen and (min-width: 1000px) {
-    h3 {
-        font-size: 40px;
-    }
-}
-@media screen and (min-width: 1300px) {
-    h1 {
-        font-size: 46px;
-    }
-    h2 {
-        font-size: 40px;
-    }
-
-h1 {
-    font-size: var(--fs-xxlg)
-}
-h2 {
-    font-size: 32px;
-}
-h3 {
-    font-size: 30px;
-}
-h4 {
-    font-size: 24px;
-}
-.subtitle {
-    font-size: 16px;
-}
-.text-small {
-    font-size: 16px;
-}
-.lead,
-.lead-align-left {
-    font-size: 18px;
-}
-.lead-align-left {
-    font-size: 16px;
-}
-.features__box-title{
-    font-size: 20px;
-}
-.user-name {
-    font-size: 20px;
-}
-.user-role {
-    font-size: 16px;
-}
-.price__switch span{
-    font-size: 20px;
-}
-.price__table-title {
-    font-size: 24px;
-}
-.price__table-premium-price {
-    font-size: 70px;
-}
-.price__table-free-price {
-    font-size: 48px;
-}
-.counter,
-.counter + span{
-    font-size: 38px;
-}
-.fun-facts__number > span {
-    font-size: 18px;
-}
 }
 
 h1,
@@ -107,9 +33,6 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
 h1,
 h2 {
     font-size: var(--fs-xxlg);
@@ -132,7 +55,6 @@ h4,
 .lead-align-left {
     font-size: var(--fs-sm);
 }
-
 @media screen and (min-width: 800px){
     h1 {
         font-size: var(--fs-display-1);

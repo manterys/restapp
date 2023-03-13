@@ -1,4 +1,15 @@
 :root {
+    --fs-xsm: 0.8rem; 
+    --fs-sm: 1rem;
+    --fs: 1.125rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xlg: 1.85rem;
+    --fs-xxlg: 2rem;
+    --fs-display-1: 2.5rem;
+    --fs-display-2: 3rem;
+    --fs-display-3: 4rem;
+
     /* 
     --fs-xsm: 12.8px
     --fs-sm: 16px
@@ -11,27 +22,14 @@
     --fs-display-2: 48px
     --fs-display-3: 64px
     */
-
-    --fs-xsm: 0.8rem; 
-    --fs-sm: 1rem;
-    --fs: 1.125rem;
-    --fs-md: 1.25rem;
-    --fs-lg: 1.5rem;
-    --fs-xlg: 1.85rem;
-    --fs-xxlg: 2rem;
-    --fs-display-1: 2.5rem;
-    --fs-display-2: 3rem;
-    --fs-display-3: 4rem;
 }
 
-
-/* Header */
 h1,
 h2,
 h3,
 h4 {
-    font-family: var(--ff-rubik);
-    font-weight: var(--fw-400);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
 }
 h1,
 h2,
@@ -143,8 +141,8 @@ h4 {
 .lead-align-left,
 .text-small,
 .lead-list {
-    font-family: var(--ff-roboto);
-    font-weight: var(--fw-400);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 .lead {
     font-size: var(--fs);
@@ -167,8 +165,8 @@ h4 {
 /* !!!! */
 .box__text-title {
     display: inline-block;
-    font-family: var(--ff-rubik);
-    font-weight: var(--fw-400);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     font-size: var(--fs-lg);
     color: var(--gray-1);
     margin-bottom: var(--space-0_25);
@@ -203,8 +201,8 @@ button,
     cursor: pointer;
     outline: none;
     border: none;
-    font-family: var(--ff-rubik);
-    font-weight: var(--fw-500);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     border-radius: 8px;
 }
 .accordion__button {
@@ -216,8 +214,7 @@ button,
     font-size: var(--fs);
     color: var(--gray-1);
 }
-.btn,
-input[type="submit"] {
+.btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,44 +266,36 @@ input[type="submit"] {
     color: var(--pink-1)
 }
 
-/* @media screen and (hover: hover){ */
-    .btn-outline:hover,
-    .btn-outline:focus {
+@media screen and (hover: hover) {
+    .btn-outline:hover {
         border-color: transparent;
     }
-    .btn-green:hover,
-    .btn-green:focus {
+    .btn-green:hover {
         background-color: var(--green-1);
     }
-    .btn-orange:hover,
-    .btn-orange:focus {
+    .btn-orange:hover {
         background-color: var(--orange-1);
     }
-    .btn-pink:hover,
-    .btn-pink:focus {
+    .btn-pink:hover {
         background-color: var(--pink-1);
     }
-    .btn-outline-celadon:hover,
-    .btn-outline-celadon:focus {
+    .btn-outline-celadon:hover {
         background-color: var(--green-2);
         color: var(--white);
     }
-    .btn-outline-green:hover,
-    .btn-outline-green:focus {
+    .btn-outline-green:hover {
         background-color: var(--white);
         color: var(--green-2);
     }
-    .btn-outline-pink:hover,
-    .btn-outline-pink:focus {
+    .btn-outline-pink:hover {
         background-color: var(--white);
         color: var(--pink-2);
     }
-    .btn-outline-white:hover,
-    .btn-outline-white:focus {
+    .btn-outline-white:hover {
         background-color: var(--pink-2);
         color: var(--white);
     }
-
+}
 @media screen and (min-width: 1000px) {
     .hero .btn-green, .btn-pink, .btn-outline-celadon {
         margin: 0;

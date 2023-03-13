@@ -1,15 +1,21 @@
-// Loader
+// AOS.init({
+//     duration: 600,
+//     once: true,
+// })
+
+// Preloader
 const appPreloader = function() {
     body = document.body;
     const preloader = document.querySelector('.preloader');
     
     window.addEventListener('load', function() {
-        body.classList.add('show')
+        preloader.classList.add('loaded');
         
         preloader.addEventListener('transitionend', function() {
-            preloader.style.display = 'none'
+            body.classList.add('show');
+            preloader.style.display = 'none';
             AOS.init({
-                duration: 800,
+                duration: 600,
                 once: true,
             })
         })
