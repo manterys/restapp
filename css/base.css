@@ -79,6 +79,26 @@
     --space-3_5: calc(3.5 * var(--space));
     --space-4: calc(4 * var(--space));
 }
+@media screen and (min-width: 1140px) {
+    :root {
+        --space-scale-ratio: 1.08;
+    }
+}
+@media screen and (min-width: 1300px) {
+    :root {
+        --space-scale-ratio: 1.16;
+    }
+}
+@media screen and (min-width: 1500px) {
+    :root {
+        --space-scale-ratio: 1.2;
+    }
+}
+@media screen and (min-width: 2000px) {
+    :root {
+        --space-scale-ratio: 1.4;
+    }
+}
 
 /* Base style */
 html {
@@ -106,7 +126,7 @@ a {
     text-decoration: none;
     color: var(--green-1);
 }
-a:focus,
+/* a:focus,
 button:focus,
 .btn:focus,
 input:focus,
@@ -116,7 +136,7 @@ textarea:focus {
             box-shadow: none;
     outline: #000 dotted 3px;
     outline-offset: .1rem;
-}
+} */
 img {
     width: 100%;
 }
@@ -131,5 +151,10 @@ img {
     .container {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1520px;
     }
 }
